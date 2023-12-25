@@ -66,6 +66,7 @@ def add_product():
 
 @app.route("/edit")
 def edit_product():
+    print("Hello we are here to edit, but not yet")
     print(request.args.get('id'))
     product = db_connection.execute(f"SELECT * FROM PRODUCT WHERE ID={request.args.get('id')}")
     for x in product:
