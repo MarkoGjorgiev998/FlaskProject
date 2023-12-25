@@ -72,7 +72,7 @@ def edit_product():
     for x in product:
         product = Product(*x)
         print(product)
-    return render_template("add_product.html", product=product)
+    return render_template("add_product.html", product=product, is_edit=True)
 
 
 if __name__ == '__main__':

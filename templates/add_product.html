@@ -8,9 +8,9 @@
 <form action="http://localhost:5000/add-product" method="POST">
     <p> {{ product }} </p>
     <p>Name <input type="text" name="name" value="{{product.name}}"/></p>
-    <p>Price <input type="text" name="price"/></p>
-    <p>Discount <input type="text" name="discount"/></p>
-    <p><input type="submit" value="Create"/></p>
+    <p>Price <input type="text" name="price" value="{{product.price}}"/></p>
+    <p>Discount <input type="text" name="discount" value="{{product.discount}}"/></p>
+    <p><input type="submit" value="{{ 'Create' if not is_edit else 'Edit'}}"/></p>
 </form>
 </body>
 </html>
